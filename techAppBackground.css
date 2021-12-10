@@ -1,0 +1,8 @@
+html.body {
+	background-color: #EFEFEF;
+	background-image: url('https://github.com/ihearttcode/thermotemp/blob/main/SCM.jpg?raw=true');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: inherit;
+	font-size: 12px;
+}
