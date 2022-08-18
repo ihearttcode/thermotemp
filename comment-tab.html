@@ -1,15 +1,18 @@
 // Switches to the comments tab for items in app TTI Support on Podio
 
 <script>
-    function when_external_loaded (callback) {
-        if (document.querySelector("li[data-type=comment]") === 'null') {
-            setTimeout (function () {
-                when_external_loaded (callback);
-            }, 100);
-        } else {callback ();}
-    };
-    when_external_loaded (function() {
-        document.querySelector("li[data-type=comment]").click();
-    });
+    function whenAvailable(element, callback) {
+    var interval = 10; // ms
+    window.setTimeout(function() {
+        if (window[element]) {
+            callback(window[element]);
+        } else {
+            whenAvailable(element, callback);
+        }
+    }, interval);
+};
+whenAvailable("li[data-type=comment]", function(t) {
+    document.querySelector("li[data-type=comment]").click();
+});
 </script>
  
