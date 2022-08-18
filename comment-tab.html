@@ -2,16 +2,14 @@
 
 <script>
     function when_external_loaded (callback) {
-        if (document.querySelector("li[data-type=comment]") === 'null' || document.querySelector("li[data-type=comment]") === 'undefined') {
+        if ($("li[data-type=comment]") === 'null' || $("li[data-type=comment]") === 'undefined') {
             setTimeout (function () {
                 when_external_loaded (callback);
             }, 100);
         } else {callback ();}
     };
-    
-  when_external_loaded (function () {
-    document.querySelector("li[data-type=comment]").click();
-  });
+    when_external_loaded (function() {
+        $("li[data-type=comment]").click();
+    });
 </script>
-
  
