@@ -2,14 +2,14 @@
 
 <script>
     function when_external_loaded (callback) {
-        if (document.querySelector("li[data-type=comment").click() === 'undefined' || document.querySelector("li[data-type=comment").click() === 'null') {
+        if (document.querySelector("li[data-type=comment]").click() === 'undefined' || document.querySelector("li[data-type=comment]").click() === 'null') {
             setTimeout (function () {
                 when_external_loaded (callback);
             }, 100);
         } else {callback ();}
     };
   when_external_loaded (function () {
-    document.querySelector("li[data-type=comment").click();
+    document.querySelector("li[data-type=comment]").click();
   });
 </script>
 
