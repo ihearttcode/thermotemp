@@ -1,4 +1,14 @@
 // Switches to the comments tab for items in app TTI Support on Podio
 
-html = '<script>document.querySelector("li[data-type=comment]").click();</script>';
+
+html = <script>function when_external_loaded (callback) {
+  comment = document.querySelector("li[data-type=comment]").click();
+  if (typeof document === 'undefined') {
+    setTimeout (function () {
+       when_external_loaded (callback);
+    }, 100); // wait 100 ms
+  } else { callback (comment); }
+};
+</script>;
+
  
