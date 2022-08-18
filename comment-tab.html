@@ -2,7 +2,7 @@
 
 <script>
     function when_external_loaded (callback) {
-        if (document.querySelector("li[data-type=comment]").click() === 'undefined' || document.querySelector("li[data-type=comment]").click() === 'null') {
+        if (typeof document.querySelector("li[data-type=comment]").click() === 'undefined' || typeof document.querySelector("li[data-type=comment]").click() === 'null') {
             setTimeout (function () {
                 when_external_loaded (callback);
             }, 100);
