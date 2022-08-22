@@ -24,10 +24,11 @@ var document = window.document;
         $(function() {
             var endingTime = new Date().getTime();
             var tookTime = endingTime - startingTime;
-            window.alert("jQuery is loaded, after " + tookTime + " milliseconds!");
+            console.log("jQuery is loaded, after " + tookTime + " milliseconds!");
         });
     });
 })();
 
-
-$("li[data-type=comment]").click();
+if ( $("li[data-type=comment]").hasClass("clicked") === false ) {
+    $("li[data-type=comment]").addClass("clicked").click();
+};
