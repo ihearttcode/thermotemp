@@ -27,8 +27,10 @@ var document = window.document;
             console.log("jQuery is loaded, after " + tookTime + " milliseconds!");
         });
     });
-})();
 
-if ( $("li[data-type=comment]").hasClass("clicked") === false ) {
-    $("li[data-type=comment]").addClass("clicked").click();
-};
+    whenReady(function($) {
+        if ( $("li[data-type=comment]").hasClass("clicked") === false ) {
+            $("li[data-type=comment]").addClass("clicked").click();
+        };
+    });
+})();
