@@ -24,7 +24,7 @@ var document = window.document;
             $("li[data-type=comment]").addClass("clicked").click();
         }
         else {
-            window.setTimeout(function() {checkReady(callback); }, 20);
+            window.setTimeout(function() {whenReady(callback); }, 20);
         }
     };
 
