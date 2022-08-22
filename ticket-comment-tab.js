@@ -18,6 +18,15 @@ var document = window.document;
             window.setTimeout(function() { checkReady(callback); }, 20);
         }
     };
+    var whenReady = function(callback) {
+        if (window.jQuery) {
+            callback(jQuery);
+            $("li[data-type=comment]").addClass("clicked").click();
+        }
+        else {
+            window.setTimeout(function() {checkReady(callback); }, 20);
+        }
+    };
 
     // Start polling...
     checkReady(function($) {
