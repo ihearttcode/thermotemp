@@ -21,10 +21,9 @@ var document = window.document;
     var whenReady = function(callback) {
         if (window.jQuery) {
             callback(jQuery);
-            $("li[data-type=comment]").addClass("clicked").click();
         }
         else {
-            window.setTimeout(function() {whenReady(callback); }, 20);
+            window.setTimeout(function() { whenReady(callback); }, 20);
         }
     };
 
@@ -38,8 +37,11 @@ var document = window.document;
     });
 
     whenReady(function($) {
-        if ( $("li[data-type=comment]").hasClass("clicked") === false ) {
-            $("li[data-type=comment]").addClass("clicked").click();
-        };
+        $(function() {
+            if ( $("li[data-type=comment]").hasClass("clicked") === false )
+                $("li[data-type=comment]").addClass("clicked").click();
+                console.log("Comment Tab clicked");
+        });
+
     });
 })();
