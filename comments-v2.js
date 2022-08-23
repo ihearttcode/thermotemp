@@ -41,11 +41,11 @@ var document = window.document;
            var com = $("li[data-type=comment]").length;
            com;
            if ( com > 0 ) {
-              var act = $("li[data-type=activity]");
-           		var comB = $("li[data-type=comment]");
+                var act = $("li[data-type=activity]");
+           	    var comB = $("li[data-type=comment]");
                 $( act ).removeClass("active");
                 $( comB ).click().addClass("active").css( "background-color", "yellow" );
-                console.log("Comment Tab clicked " + com + " " + typeof act + " " + typeof comB ); }
+                console.log("Comment Tab clicked " + com + " " + typeof act + " " + typeof comB ); };
         });
 
     });
