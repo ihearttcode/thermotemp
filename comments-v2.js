@@ -42,7 +42,7 @@ var document = window.document;
            com;
            if ( com > 0 ) {
               var act = $("li[data-type=activity]");
-           		var comB = $("li[data-type=comments]");
+           		var comB = $("li[data-type=comment]");
                 $( act ).removeClass("active");
                 $( comB ).click().addClass("active").css( "background-color", "yellow" );
                 console.log("Comment Tab clicked " + com + " " + typeof act + " " + typeof comB ); }
