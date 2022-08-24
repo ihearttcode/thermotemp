@@ -10,4 +10,4 @@ var commentTab = function() {
         activity.classList.remove("active");
         }
     };
-commentTab(document);
+document.addEventListener("load", commentTab());
