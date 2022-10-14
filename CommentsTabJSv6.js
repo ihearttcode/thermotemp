@@ -4,6 +4,7 @@ function caller() {
   script.src = 'https://cdn.jsdelivr.net/gh/ihearttcode/thermotemp@main/CommentsTabJSv6.js';
   script.type = 'text/javascript';
   document.getElementsByTagName("head")[0].appendChild(script);
+}
 function resolveAfter5Seconds(x,y) {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -18,6 +19,6 @@ async function clickCommentsTab() {
   console.log(x); // 'Comment Tab clicked'
   const y = await resolveAfter5Seconds(document.querySelector('li[data-type=comment]').click());
 }
-clickCommentsTab()
-}
 caller();
+clickCommentsTab();
+
