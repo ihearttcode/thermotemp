@@ -1,5 +1,3 @@
-var comments =  $("li[data-type=comment]").click();
-
 async function f() {
   var commentSection = {
     //$("li[data-type=comment]").click();
@@ -10,4 +8,5 @@ async function f() {
   await Document.readyState === 'complete';
 	console.log(await commentSection);
 }
+var comments =  $("li[data-type=comment]").click();
 f(comments);
