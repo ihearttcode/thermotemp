@@ -27,7 +27,7 @@ var postCampaign = {
     "emailAddress": getQueryVariable("emailAddress"),
     "firstName": getQueryVariable("firstName"),
     "lastName": getQueryVariable("lastName"),
-    "companyName": getQueryVariable("companyname"),
+    "companyName": getQueryVariable("companyName"),
     "jobTitle": getQueryVariable("jobTitle")
   }
 };
