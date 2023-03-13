@@ -23,7 +23,7 @@ async function asyncCall() {
       "lastName": getQueryVariable("lastName"),
       "companyName": getQueryVariable("companyName"),
       "jobTitle": getQueryVariable("jobTitle"),
-      "campaign": getQueryVariable("campaign)
+      "campaign": getQueryVariable("campaign")
     }
   };
 
