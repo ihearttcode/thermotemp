@@ -26,14 +26,18 @@ async function asyncCall() {
       "campaign": getQueryVariable("campaign")
     }
   };
-
-
+  
+  
   function ajaxToPodio(customer) {
     $.ajax(customer).done(function() {
       console.log("Ajax Completed");
     });
   }
-  
+
+  if (postCampaign.data.emailAddress.toString() != "false") {
+
   ajaxToPodio(postCampaign);
+  }
 }
+
 asyncCall();
