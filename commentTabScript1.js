@@ -1,3 +1,4 @@
+var document = window.document;
 function clickCommentTab() {
   var commentsTab = document.querySelector("li[data-type='comment']");
   if (!commentsTab.classList.contains("clicked")) {
